@@ -41,7 +41,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: min(3rem,5%);
-  margin: min(4rem, 20%);
+  margin: min(1rem, 8%);
   font-size: clamp(1rem, 1.5vw, 5rem);
   word-spacing: 0.5rem;
   padding: min(4rem,10%);
