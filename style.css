@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.roboto-heading {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.roboto-body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: clamp(14px, 20vw, 1rem);
+}
+
+html {
+  background-color: black;
+  color: white;
+  overflow: scroll;
+  min-height: 100dvh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: white;
+}
+
+main{
+  flex: 1;
+}
+#nav-bar {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  min-width: 100vw;
+}
+
+#header-logo {
+  display: flex;
+  min-width: 50vw;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-menu {
+  min-width: 50%;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: min(10rem, 5%);
+  gap: clamp(1rem, 4vw, 10rem);
+}
+
+.nav-menu a:link,
+.nav-menu a:visited {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: white;
+  transform: translateY(-0.5rem);
+}
+
+main {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+}
+.parent-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 60dvw;
+  background-color: rgb(0, 0, 0);
+  min-height: 80vh;
+  margin: min(2rem, 10%);
+  padding: min(1rem, 8%);
+  border: 2px solid orangered;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px orangered;
+}
+
+.child-container {
+  display: flex;
+  min-width: 100%;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#container-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+  height: fit-content;
+  min-width: 100%;
+}
+
+.grand-child-1 img {
+  height: 15rem;
+  width: 15rem;
+  background-color: rgba(255, 255, 255, 0.806);
+  padding: min(2em, 20%);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.grand-child-1 img:hover {
+  background-color: white;
+  transform: translateY(-1rem);
+}
+
+#container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(1rem, 8%);
+  min-width: 90%;
+  height: fit-content;
+}
+
+.grand-child-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  font-size: clamp(0.8rem, 1.3vw, 3rem);
+  text-wrap: nowrap;
+}
+.hidden {
+  display: none;
+}
+.result-popup {
+  z-index: 100;
+  position: fixed;
+  border-radius: 2rem;
+  border: 5px solid white;
+  background-color: rgb(255, 77, 0);
+  inset: min(5rem, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 20rem);
+
+  /* Animation setup */
+  animation: popup 1.4s ease-in-out 1;
+  animation-fill-mode: forwards; /* This keeps the end state */
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 728px) {
+  html {
+    overflow: scroll;
+  }
+  .nav-menu {
+    display: none;
+  }
+  #header-logo {
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #container-2 {
+    min-width: 100%;
+  }
+  .result-popup {
+    inset: 1rem;
+    border: 1px solid white;
+    color: black;
+  }
+
+  .grand-child-1 img {
+    background-color: white;
+    border-radius: 1.4rem;
+    height: 10rem;
+    width: 10rem;
+    flex: 1;
+  }
+}

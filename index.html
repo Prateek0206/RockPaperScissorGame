@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>   
+
+  <body>
+    <header>
+      <div id="nav-bar">
+        <div id="header-logo" class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 220 60"
+            width="220"
+            height="60"
+          >
+            <!-- Square -->
+            <rect
+              x="0"
+              y="10"
+              width="40"
+              height="40"
+              fill="white"
+              stroke="#fff"
+              stroke-width="4"
+            />
+
+            <!-- Triangle -->
+            <polygon
+              points="60,50 80,10 100,50"
+              fill="none"
+              stroke="#fff"
+              stroke-width="4"
+            />
+
+            <!-- Circle -->
+            <circle
+              cx="140"
+              cy="30"
+              r="20"
+              fill="white"
+              stroke="#fff"
+              stroke-width="4"
+            />
+
+            <!-- Cross / X -->
+            <line
+              x1="180"
+              y1="10"
+              x2="220"
+              y2="50"
+              stroke="#fff"
+              stroke-width="4"
+            />
+            <line
+              x1="220"
+              y1="10"
+              x2="180"
+              y2="50"
+              stroke="#fff"
+              stroke-width="4"
+            />
+          </svg>
+        </div>
+        <div class="nav-menu roboto-body">
+          <a href="rules.html" target="_blank"><span>Rules</span></a>
+          <a href="https://prateek0206.github.io/FizzBuzzGame/" target="_blank"
+            ><span>More Games</span></a
+          >
+          <a href="#"><span>About Me</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="parent-container">
+        <div class="hidden js-result-popup">
+          <span></span>
+        </div>
+        <div class="child-container" id="container-1">
+          <span class="grand-child-1 js-grand-child-1" id="rock"
+            ><img src="images/rock.png" alt="Rock"
+          /></span>
+          <span id="paper" class="grand-child-1 js-grand-child-1"
+            ><img src="images/paper.png" alt="Paper"
+          /></span>
+          <span id="scissors" class="grand-child-1 js-grand-child-1"
+            ><img src="images/scissors.png" alt="Scissors"
+          /></span>
+        </div>
+        <div class="child-container" id="container-2">
+          <div class="grand-child-2 bold">
+            <span class="left-content js-left-content"></span>
+
+            <span class="right-content js-right-content"> </span>
+          </div>
+          <div class="grand-child-2 bold">
+            <span class="left-win-counter js-left-win-counter"> </span>
+
+            <span class="right-win-counter js-right-win-counter"></span>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
